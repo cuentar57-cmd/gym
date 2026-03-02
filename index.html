@@ -1,327 +1,326 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Iron Force Gym</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iron Force Gym</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:'Poppins',sans-serif;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
 
-    body{
-      background:#0f0f0f;
-      color:#fff;
-      line-height:1.6;
-    }
+body{
+  background:#0f0f0f;
+  color:#fff;
+  line-height:1.6;
+}
 
-    section{
-      padding:80px 10%;
-    }
+section{
+  padding:80px 10%;
+}
 
-    h2{
-      text-align:center;
-      font-size:2.3rem;
-      margin-bottom:50px;
-    }
+h2{
+  text-align:center;
+  font-size:2.3rem;
+  margin-bottom:50px;
+}
 
-    a{text-decoration:none;color:inherit;}
+a{text-decoration:none;color:inherit;}
 
-    /* HERO */
-    .hero{
-      min-height:100vh;
-      background:
-        linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.9)),
-        url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438") center/cover no-repeat;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      padding:40px;
-    }
+.fade{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all .8s ease;
+}
 
-    .hero h1{
-      font-size:3.2rem;
-      font-weight:700;
-      letter-spacing:2px;
-    }
+.fade.show{
+  opacity:1;
+  transform:translateY(0);
+}
 
-    .hero p{
-      margin:20px 0;
-      font-size:1.2rem;
-      color:#ddd;
-    }
+/* HERO */
+.hero{
+  min-height:100vh;
+  background:
+    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.9)),
+    url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:40px;
+}
 
-    .btn{
-      background:#25d366;
-      color:#000;
-      padding:15px 35px;
-      border-radius:50px;
-      font-weight:600;
-      display:inline-block;
-      transition:.3s;
-    }
+.hero h1{
+  font-size:3.2rem;
+  font-weight:700;
+  letter-spacing:2px;
+  animation:zoom 1s ease;
+}
 
-    .btn:hover{
-      transform:scale(1.07);
-      background:#1ebe5d;
-    }
+@keyframes zoom{
+  from{transform:scale(.9);opacity:0}
+  to{transform:scale(1);opacity:1}
+}
 
-    /* BENEFICIOS */
-    .benefits{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:30px;
-    }
+.hero p{
+  margin:20px 0;
+  font-size:1.2rem;
+  color:#ddd;
+}
 
-    .benefit{
-      background:#1a1a1a;
-      padding:35px;
-      border-radius:20px;
-      text-align:center;
-    }
+.btn{
+  background:#25d366;
+  color:#000;
+  padding:15px 35px;
+  border-radius:50px;
+  font-weight:600;
+  display:inline-block;
+  transition:.3s;
+}
 
-    .benefit span{
-      font-size:2.3rem;
-      display:block;
-      margin-bottom:15px;
-    }
+.btn:hover{
+  transform:scale(1.08);
+  background:#1ebe5d;
+}
 
-    /* CLASES */
-    .classes{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:30px;
-    }
+/* BENEFICIOS */
+.benefits{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+}
 
-    .class{
-      background:#1a1a1a;
-      padding:40px;
-      border-radius:20px;
-      text-align:center;
-      font-size:1.2rem;
-      font-weight:600;
-    }
+.benefit{
+  background:#1a1a1a;
+  padding:35px;
+  border-radius:20px;
+  text-align:center;
+  transition:.3s;
+}
 
-    /* PLANES */
-    .plans{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:30px;
-    }
+.benefit i{
+  font-size:2.5rem;
+  color:#25d366;
+  margin-bottom:15px;
+}
 
-    .plan{
-      background:#1a1a1a;
-      padding:45px 30px;
-      border-radius:20px;
-      text-align:center;
-      border:2px solid transparent;
-    }
+.benefit:hover{
+  transform:translateY(-8px);
+}
 
-    .plan.highlight{
-      border-color:#25d366;
-      transform:scale(1.05);
-    }
+/* CLASES */
+.classes{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+}
 
-    .plan h3{
-      font-size:1.6rem;
-      margin-bottom:15px;
-    }
+.class{
+  background:#1a1a1a;
+  padding:40px;
+  border-radius:20px;
+  text-align:center;
+  font-size:1.2rem;
+  font-weight:600;
+  transition:.3s;
+}
 
-    .plan p{
-      color:#ccc;
-      margin-bottom:25px;
-    }
+.class i{
+  font-size:2rem;
+  margin-bottom:15px;
+  color:#25d366;
+}
 
-    /* RESERVAS */
-    .reservation-form{
-      max-width:500px;
-      margin:auto;
-      display:grid;
-      gap:20px;
-    }
+.class:hover{
+  transform:scale(1.05);
+}
 
-    .reservation-form select,
-    .reservation-form input{
-      padding:15px;
-      border-radius:12px;
-      border:none;
-      font-size:1rem;
-    }
+/* PLANES */
+.plans{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
 
-    /* TESTIMONIOS */
-    .testimonials{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:30px;
-    }
+.plan{
+  background:#1a1a1a;
+  padding:45px 30px;
+  border-radius:20px;
+  text-align:center;
+  border:2px solid transparent;
+  transition:.3s;
+}
 
-    .testimonial{
-      background:#1a1a1a;
-      padding:30px;
-      border-radius:20px;
-      font-style:italic;
-    }
+.plan.highlight{
+  border-color:#25d366;
+  transform:scale(1.05);
+}
 
-    /* FOOTER */
-    footer{
-      background:#000;
-      text-align:center;
-      padding:40px 20px;
-      color:#aaa;
-    }
+.plan i{
+  font-size:2rem;
+  color:#25d366;
+  margin-bottom:15px;
+}
 
-    /* WHATSAPP FLOAT */
-    .whatsapp-float{
-      position:fixed;
-      bottom:20px;
-      right:20px;
-      background:#25d366;
-      color:#000;
-      padding:15px 22px;
-      border-radius:50px;
-      font-weight:600;
-      box-shadow:0 10px 30px rgba(0,0,0,.4);
-      z-index:999;
-    }
+/* RESERVAS */
+.reservation-form{
+  max-width:500px;
+  margin:auto;
+  display:grid;
+  gap:20px;
+}
 
-    @media(max-width:600px){
-      .hero h1{font-size:2.3rem;}
-    }
-  </style>
+.reservation-form select,
+.reservation-form input{
+  padding:15px;
+  border-radius:12px;
+  border:none;
+  font-size:1rem;
+}
+
+/* TESTIMONIOS */
+.testimonials{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.testimonial{
+  background:#1a1a1a;
+  padding:30px;
+  border-radius:20px;
+  font-style:italic;
+}
+
+/* FOOTER */
+footer{
+  background:#000;
+  text-align:center;
+  padding:40px 20px;
+  color:#aaa;
+}
+
+/* WHATSAPP */
+.whatsapp-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25d366;
+  color:#000;
+  padding:15px 22px;
+  border-radius:50px;
+  font-weight:600;
+  box-shadow:0 10px 30px rgba(0,0,0,.4);
+  z-index:999;
+  animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.08)}
+  100%{transform:scale(1)}
+}
+
+@media(max-width:600px){
+  .hero h1{font-size:2.3rem;}
+}
+</style>
 </head>
 
 <body>
 
-<!-- HERO -->
 <div class="hero">
   <div>
     <h1>IRON FORCE GYM</h1>
-    <p>Transformá tu cuerpo. Mejorá tu vida.<br>Entrená con los mejores.</p>
-    <a class="btn" href="https://wa.me/5491111111111" target="_blank">
-      Quiero entrenar ahora
-    </a>
+    <p>Transformá tu cuerpo. Mejorá tu vida.</p>
+    <a class="btn" href="https://wa.me/5491111111111">Quiero entrenar ahora</a>
   </div>
 </div>
 
-<!-- BENEFICIOS -->
-<section>
-  <h2>¿Por qué elegirnos?</h2>
-  <div class="benefits">
-    <div class="benefit"><span>🏋️</span>Entrenadores certificados</div>
-    <div class="benefit"><span>🔥</span>Rutinas personalizadas</div>
-    <div class="benefit"><span>⏱️</span>Horarios flexibles</div>
-    <div class="benefit"><span>💪</span>Resultados reales</div>
-  </div>
+<section class="fade">
+<h2>¿Por qué elegirnos?</h2>
+<div class="benefits">
+  <div class="benefit"><i class="fas fa-dumbbell"></i>Entrenadores certificados</div>
+  <div class="benefit"><i class="fas fa-fire"></i>Rutinas personalizadas</div>
+  <div class="benefit"><i class="fas fa-clock"></i>Horarios flexibles</div>
+  <div class="benefit"><i class="fas fa-medal"></i>Resultados reales</div>
+</div>
 </section>
 
-<!-- CLASES -->
-<section>
-  <h2>Nuestras clases</h2>
-  <div class="classes">
-    <div class="class">Funcional</div>
-    <div class="class">Musculación</div>
-    <div class="class">Cross Training</div>
-    <div class="class">HIIT</div>
-  </div>
+<section class="fade">
+<h2>Nuestras clases</h2>
+<div class="classes">
+  <div class="class"><i class="fas fa-running"></i>Funcional</div>
+  <div class="class"><i class="fas fa-dumbbell"></i>Musculación</div>
+  <div class="class"><i class="fas fa-bolt"></i>Cross Training</div>
+  <div class="class"><i class="fas fa-stopwatch"></i>HIIT</div>
+</div>
 </section>
 
-<!-- PLANES -->
-<section>
-  <h2>Planes</h2>
-  <div class="plans">
-    <div class="plan">
-      <h3>Básico</h3>
-      <p>Acceso libre + asesoramiento</p>
-      <a class="btn" href="https://wa.me/5491111111111">Consultar</a>
-    </div>
-
-    <div class="plan highlight">
-      <h3>Full</h3>
-      <p>Clases + seguimiento</p>
-      <a class="btn" href="https://wa.me/5491111111111">Consultar</a>
-    </div>
-
-    <div class="plan">
-      <h3>Premium</h3>
-      <p>Todo incluido + personal trainer</p>
-      <a class="btn" href="https://wa.me/5491111111111">Consultar</a>
-    </div>
-  </div>
+<section class="fade">
+<h2>Planes</h2>
+<div class="plans">
+  <div class="plan"><i class="fas fa-user"></i><h3>Básico</h3><p>Acceso libre</p></div>
+  <div class="plan highlight"><i class="fas fa-star"></i><h3>Full</h3><p>Clases + seguimiento</p></div>
+  <div class="plan"><i class="fas fa-crown"></i><h3>Premium</h3><p>Todo incluido</p></div>
+</div>
 </section>
 
-<!-- RESERVAS -->
-<section>
-  <h2>Reservá tu clase</h2>
-
-  <form class="reservation-form" onsubmit="sendReservation(event)">
-    <select id="clase" required>
-      <option value="">Seleccioná una clase</option>
-      <option value="Funcional">Funcional</option>
-      <option value="Musculación">Musculación</option>
-      <option value="Cross Training">Cross Training</option>
-      <option value="HIIT">HIIT</option>
-    </select>
-
-    <input type="date" id="fecha" required>
-
-    <select id="horario" required>
-      <option value="">Seleccioná un horario</option>
-      <option value="07:00">07:00</option>
-      <option value="09:00">09:00</option>
-      <option value="18:00">18:00</option>
-      <option value="20:00">20:00</option>
-    </select>
-
-    <button class="btn" type="submit">Reservar por WhatsApp</button>
-  </form>
+<section class="fade">
+<h2>Reservá tu clase</h2>
+<form class="reservation-form" onsubmit="sendReservation(event)">
+  <select id="clase" required>
+    <option value="">Clase</option>
+    <option>Funcional</option>
+    <option>Musculación</option>
+    <option>Cross</option>
+    <option>HIIT</option>
+  </select>
+  <input type="date" id="fecha" required>
+  <select id="horario" required>
+    <option value="">Horario</option>
+    <option>07:00</option>
+    <option>09:00</option>
+    <option>18:00</option>
+    <option>20:00</option>
+  </select>
+  <button class="btn">Reservar por WhatsApp</button>
+</form>
 </section>
 
-<!-- TESTIMONIOS -->
-<section>
-  <h2>Resultados reales</h2>
-  <div class="testimonials">
-    <div class="testimonial">“Bajé 8 kg en 2 meses. Tremendo.”</div>
-    <div class="testimonial">“El mejor ambiente para entrenar.”</div>
-    <div class="testimonial">“Nunca fui tan constante.”</div>
-  </div>
-</section>
-
-<!-- FOOTER -->
 <footer>
-  <p>📍 Tu Ciudad • 🕒 Lun a Sáb 7 a 22 hs</p>
-  <p>Iron Force Gym © 2026</p>
+<p>📍 Tu Ciudad • 🕒 Lun a Sáb 7 a 22 hs</p>
+<p>Iron Force Gym © 2026</p>
 </footer>
 
-<!-- WHATSAPP FLOAT -->
-<a class="whatsapp-float" href="https://wa.me/5491111111111" target="_blank">
-  💬 WhatsApp
+<a class="whatsapp-float" href="https://wa.me/5491111111111">
+<i class="fab fa-whatsapp"></i>
 </a>
 
 <script>
+const faders=document.querySelectorAll('.fade');
+window.addEventListener('scroll',()=>{
+  faders.forEach(el=>{
+    const pos=el.getBoundingClientRect().top;
+    if(pos<window.innerHeight-100){
+      el.classList.add('show');
+    }
+  });
+});
+
 function sendReservation(e){
   e.preventDefault();
-
-  const clase = document.getElementById("clase").value;
-  const fecha = document.getElementById("fecha").value;
-  const horario = document.getElementById("horario").value;
-
-  const mensaje =
-    "Hola! Quiero reservar una clase.%0A" +
-    "Clase: " + clase + "%0A" +
-    "Fecha: " + fecha + "%0A" +
-    "Horario: " + horario;
-
-  window.open(
-    "https://wa.me/5491111111111?text=" + mensaje,
-    "_blank"
-  );
+  const c=clase.value,f=fecha.value,h=horario.value;
+  const m=`Hola! Quiero reservar una clase.%0AClase: ${c}%0AFecha: ${f}%0AHorario: ${h}`;
+  window.open("https://wa.me/5491111111111?text="+m,"_blank");
 }
 </script>
 
