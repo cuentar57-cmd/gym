@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iron Force Gym</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#0f0f0f;
+      color:#fff;
+      line-height:1.6;
+    }
+
+    section{
+      padding:80px 10%;
+    }
+
+    h2{
+      text-align:center;
+      font-size:2.3rem;
+      margin-bottom:50px;
+    }
+
+    a{text-decoration:none;color:inherit;}
+
+    /* HERO */
+    .hero{
+      min-height:100vh;
+      background:
+        linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.9)),
+        url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438") center/cover no-repeat;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:40px;
+    }
+
+    .hero h1{
+      font-size:3.2rem;
+      font-weight:700;
+      letter-spacing:2px;
+    }
+
+    .hero p{
+      margin:20px 0;
+      font-size:1.2rem;
+      color:#ddd;
+    }
+
+    .btn{
+      background:#25d366;
+      color:#000;
+      padding:15px 35px;
+      border-radius:50px;
+      font-weight:600;
+      display:inline-block;
+      transition:.3s;
+    }
+
+    .btn:hover{
+      transform:scale(1.07);
+      background:#1ebe5d;
+    }
+
+    /* BENEFICIOS */
+    .benefits{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:30px;
+    }
+
+    .benefit{
+      background:#1a1a1a;
+      padding:35px;
+      border-radius:20px;
+      text-align:center;
+    }
+
+    .benefit span{
+      font-size:2.3rem;
+      display:block;
+      margin-bottom:15px;
+    }
+
+    /* CLASES */
+    .classes{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:30px;
+    }
+
+    .class{
+      background:#1a1a1a;
+      padding:40px;
+      border-radius:20px;
+      text-align:center;
+      font-size:1.2rem;
+      font-weight:600;
+    }
+
+    /* PLANES */
+    .plans{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:30px;
+    }
+
+    .plan{
+      background:#1a1a1a;
+      padding:45px 30px;
+      border-radius:20px;
+      text-align:center;
+      border:2px solid transparent;
+    }
+
+    .plan.highlight{
+      border-color:#25d366;
+      transform:scale(1.05);
+    }
+
+    .plan h3{
+      font-size:1.6rem;
+      margin-bottom:15px;
+    }
+
+    .plan p{
+      color:#ccc;
+      margin-bottom:25px;
+    }
+
+    /* RESERVAS */
+    .reservation-form{
+      max-width:500px;
+      margin:auto;
+      display:grid;
+      gap:20px;
+    }
+
+    .reservation-form select,
+    .reservation-form input{
+      padding:15px;
+      border-radius:12px;
+      border:none;
+      font-size:1rem;
+    }
+
+    /* TESTIMONIOS */
+    .testimonials{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .testimonial{
+      background:#1a1a1a;
+      padding:30px;
+      border-radius:20px;
+      font-style:italic;
+    }
+
+    /* FOOTER */
+    footer{
+      background:#000;
+      text-align:center;
+      padding:40px 20px;
+      color:#aaa;
+    }
+
+    /* WHATSAPP FLOAT */
+    .whatsapp-float{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#25d366;
+      color:#000;
+      padding:15px 22px;
+      border-radius:50px;
+      font-weight:600;
+      box-shadow:0 10px 30px rgba(0,0,0,.4);
+      z-index:999;
+    }
+
+    @media(max-width:600px){
+      .hero h1{font-size:2.3rem;}
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <h1>IRON FORCE GYM</h1>
+    <p>Transformá tu cuerpo. Mejorá tu vida.<br>Entrená con los mejores.</p>
+    <a class="btn" href="https://wa.me/5491111111111" target="_blank">
+      Quiero entrenar ahora
+    </a>
+  </div>
+</div>
+
+<!-- BENEFICIOS -->
+<section>
+  <h2>¿Por qué elegirnos?</h2>
+  <div class="benefits">
+    <div class="benefit"><span>🏋️</span>Entrenadores certificados</div>
+    <div class="benefit"><span>🔥</span>Rutinas personalizadas</div>
+    <div class="benefit"><span>⏱️</span>Horarios flexibles</div>
+    <div class="benefit"><span>💪</span>Resultados reales</div>
+  </div>
+</section>
+
+<!-- CLASES -->
+<section>
+  <h2>Nuestras clases</h2>
+  <div class="classes">
+    <div class="class">Funcional</div>
+    <div class="class">Musculación</div>
+    <div class="class">Cross Training</div>
+    <div class="class">HIIT</div>
+  </div>
+</section>
+
+<!-- PLANES -->
+<section>
+  <h2>Planes</h2>
+  <div class="plans">
+    <div class="plan">
+      <h3>Básico</h3>
+      <p>Acceso libre + asesoramiento</p>
+      <a class="btn" href="https://wa.me/5491111111111">Consultar</a>
+    </div>
+
+    <div class="plan highlight">
+      <h3>Full</h3>
+      <p>Clases + seguimiento</p>
+      <a class="btn" href="https://wa.me/5491111111111">Consultar</a>
+    </div>
+
+    <div class="plan">
+      <h3>Premium</h3>
+      <p>Todo incluido + personal trainer</p>
+      <a class="btn" href="https://wa.me/5491111111111">Consultar</a>
+    </div>
+  </div>
+</section>
+
+<!-- RESERVAS -->
+<section>
+  <h2>Reservá tu clase</h2>
+
+  <form class="reservation-form" onsubmit="sendReservation(event)">
+    <select id="clase" required>
+      <option value="">Seleccioná una clase</option>
+      <option value="Funcional">Funcional</option>
+      <option value="Musculación">Musculación</option>
+      <option value="Cross Training">Cross Training</option>
+      <option value="HIIT">HIIT</option>
+    </select>
+
+    <input type="date" id="fecha" required>
+
+    <select id="horario" required>
+      <option value="">Seleccioná un horario</option>
+      <option value="07:00">07:00</option>
+      <option value="09:00">09:00</option>
+      <option value="18:00">18:00</option>
+      <option value="20:00">20:00</option>
+    </select>
+
+    <button class="btn" type="submit">Reservar por WhatsApp</button>
+  </form>
+</section>
+
+<!-- TESTIMONIOS -->
+<section>
+  <h2>Resultados reales</h2>
+  <div class="testimonials">
+    <div class="testimonial">“Bajé 8 kg en 2 meses. Tremendo.”</div>
+    <div class="testimonial">“El mejor ambiente para entrenar.”</div>
+    <div class="testimonial">“Nunca fui tan constante.”</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>📍 Tu Ciudad • 🕒 Lun a Sáb 7 a 22 hs</p>
+  <p>Iron Force Gym © 2026</p>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a class="whatsapp-float" href="https://wa.me/5491111111111" target="_blank">
+  💬 WhatsApp
+</a>
+
+<script>
+function sendReservation(e){
+  e.preventDefault();
+
+  const clase = document.getElementById("clase").value;
+  const fecha = document.getElementById("fecha").value;
+  const horario = document.getElementById("horario").value;
+
+  const mensaje =
+    "Hola! Quiero reservar una clase.%0A" +
+    "Clase: " + clase + "%0A" +
+    "Fecha: " + fecha + "%0A" +
+    "Horario: " + horario;
+
+  window.open(
+    "https://wa.me/5491111111111?text=" + mensaje,
+    "_blank"
+  );
+}
+</script>
+
+</body>
+</html>
